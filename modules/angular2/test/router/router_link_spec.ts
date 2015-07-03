@@ -57,7 +57,7 @@ import {
          tcb.createAsync(TestComponent)
              .then((testComponent) => {
                testComponent.detectChanges();
-               // TODO: shouldn't this be just 'click'
+               // TODO: shouldn't this be just 'click' rather than '^click'?
                testComponent.query(By.css('a')).triggerEventHandler('^click', {});
                expect(router.spy("navigate")).toHaveBeenCalledWith('/detail');
                async.done();
